@@ -25,8 +25,8 @@ class RegistrationForm:
         browser.element('#userNumber').type(user.user_number)
         date_picker = DatePicker(browser.element('#dateOfBirthInput'))
         date_picker.select_date(user.birth_day, user.birth_month, user.birth_year)
-        browser.element('#dateOfBirthInput').send_keys(Keys.CONTROL + 'a').type(
-        user.birth_day + user.birth_month + user.birth_year).press_enter()
+        #browser.element('#dateOfBirthInput').send_keys(Keys.CONTROL + 'a').type(
+        #user.birth_day + user.birth_month + user.birth_year).press_enter()
         for subject in user.subjects:
             browser.element('#subjectsInput').type(subject.value).press_enter()
         browser.element('[for="hobbies-checkbox-1"][class="custom-control-label"]').click()
